@@ -7,7 +7,7 @@ The project's primary goal is to create a "digital twin" of a real-world populat
 ## Project Flowchart
 This flowchart illustrates the entire data and application pipeline, from raw data acquisition to the final interactive visualization.
 
-```
+
 graph TD
     subgraph "Phase 1: Data Acquisition & Preparation"
         A[Start: Data Hunt] --> B(Download Geospatial Data<br/>GADM Shapefiles);
@@ -42,7 +42,7 @@ graph TD
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style U fill:#ccf,stroke:#333,stroke-width:2px
-```
+
 
 ## Key features
 - Data-Driven World Generation: The simulation environment is built from the ground up using official 2011 Census data for population figures and GADM data for geographical boundaries, ensuring a realistic population distribution.
