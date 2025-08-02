@@ -42,21 +42,18 @@ graph TD
         S --> T["Visualization<br/>Recharts"];
         T --> U[Display Epidemic Curve Graph];
     end
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style U fill:#ccf,stroke:#333,stroke-width:2px
 ```
 
 ---
 
 ## Key Features
 
-* **Data-Driven World Generation:** The simulation environment is built from the ground up using official 2011 Census data for population figures and GADM data for geographical boundaries, ensuring a realistic population distribution.
-* **Agent-Based Modeling (ABM):** Simulates a population of over 600,000 individual agents, each with a health status (Susceptible, Infected, or Recovered) based on the classic SIR epidemiological model.
-* **Spatial Transmission:** The spread of disease is not random; it's based on the geographic proximity of agents, calculated efficiently using a k-d tree spatial index.
-* **Interactive Control Panel:** A web-based frontend built with Next.js and React allows users to control simulation parameters like population size, infection radius, and transmission probability.
-* **Dynamic Visualization:** The results of the simulation, including the classic S-I-R epidemic curve, are plotted in real-time using Recharts.
-* **Full-Stack Architecture:** A robust backend built with Python and FastAPI serves the simulation results to a modern, responsive frontend.
+- **Data-Driven World Generation:** The simulation environment is built from the ground up using official 2011 Census data for population figures and GADM data for geographical boundaries, ensuring a realistic population distribution.
+- **Agent-Based Modeling (ABM):** Simulates a population of over 600,000 individual agents, each with a health status (Susceptible, Infected, or Recovered) based on the classic SIR epidemiological model.
+- **Spatial Transmission:** The spread of disease is not random; it's based on the geographic proximity of agents, calculated efficiently using a k-d tree spatial index.
+- **Interactive Control Panel:** A web-based frontend built with Next.js and React allows users to control simulation parameters like population size, infection radius, and transmission probability.
+- **Dynamic Visualization:** The results of the simulation, including the classic S-I-R epidemic curve, are plotted in real-time using Recharts.
+- **Full-Stack Architecture:** A robust backend built with Python and FastAPI serves the simulation results to a modern, responsive frontend.
 
 ---
 
@@ -87,10 +84,10 @@ This is the first major result of the project. It compares the baseline simulati
 
 ## Tech Stack
 
-* **Backend:** Python, FastAPI, Camelot-py (for data extraction), GeoPandas, NumPy, SciPy.
-* **Frontend:** JavaScript, Next.js, React, Tailwind CSS, Recharts.
-* **Data Processing:** Jupyter Notebooks, Pandas.
-* **DevOps:** Virtual Environments (`venv`), `npm`.
+- **Backend:** Python, FastAPI, Camelot-py (for data extraction), GeoPandas, NumPy, SciPy.
+- **Frontend:** JavaScript, Next.js, React, Tailwind CSS, Recharts.
+- **Data Processing:** Jupyter Notebooks, Pandas.
+- **DevOps:** Virtual Environments (`venv`), `npm`.
 
 ---
 
@@ -125,9 +122,9 @@ Follow these steps to set up and run the project on your local machine.
 
 ### Prerequisites
 
-* Python 3.9+
-* Node.js 18+
-* Git
+- Python 3.9+
+- Node.js 18+
+- Git
 
 ### 1. Clone the Repository
 
@@ -151,7 +148,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-*(Note: You will need to create a `requirements.txt` file using `pip freeze > requirements.txt`)*
+_(Note: You will need to create a `requirements.txt` file using `pip freeze > requirements.txt`)_
 
 ### 3. Frontend Setup
 
@@ -195,7 +192,7 @@ The web application will be available at `http://localhost:3000`. Open this URL 
 
 This project serves as a strong foundation. Future research and development could include:
 
-* **Implementing the Dual-Contagion Model:** Add a second layer to the simulation to model the spread of information and misinformation, and its effect on agent behavior.
-* **Adding More Interventions:** Model vaccination campaigns, mask mandates, and targeted lockdowns based on real-time infection clusters.
-* **Network-Based Social Graphs:** Replace purely spatial interaction with a more realistic social network graph (e.g., connecting agents in households and workplaces) for higher fidelity simulations.
-* **Model Validation:** Calibrate the model's parameters and validate its output against real-world historical case data from Rewari district to improve its predictive accuracy.
+- **Implementing the Dual-Contagion Model:** Add a second layer to the simulation to model the spread of information and misinformation, and its effect on agent behavior.
+- **Adding More Interventions:** Model vaccination campaigns, mask mandates, and targeted lockdowns based on real-time infection clusters.
+- **Network-Based Social Graphs:** Replace purely spatial interaction with a more realistic social network graph (e.g., connecting agents in households and workplaces) for higher fidelity simulations.
+- **Model Validation:** Calibrate the model's parameters and validate its output against real-world historical case data from Rewari district to improve its predictive accuracy.
