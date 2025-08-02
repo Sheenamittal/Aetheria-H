@@ -13,34 +13,34 @@ This flowchart illustrates the entire data and application pipeline, from raw da
 ```mermaid
 graph TD
     subgraph "Phase 1: Data Acquisition & Preparation"
-        A[Start: Data Hunt] --> B(Download Geospatial Data<br/>GADM Shapefiles);
-        A --> C(Download Census Data<br/>Govt. of India PDF Handbooks);
-        B --> D["Data Extraction & Cleaning<br/>(Jupyter Notebook w/ GeoPandas)"];
-        C --> E["Data Extraction & Cleaning<br/>(Jupyter Notebook w/ Camelot)"];
+        A[Start: Data Hunt] --> B[Download Geospatial Data<br/>GADM Shapefiles];
+        A --> C[Download Census Data<br/>Govt. of India PDF Handbooks];
+        B --> D["Data Extraction & Cleaning<br/>Jupyter Notebook, GeoPandas"];
+        C --> E["Data Extraction & Cleaning<br/>Jupyter Notebook, Camelot"];
         D --> F[rewari_boundary.geojson];
         E --> G[rewari_village_population_2011.csv];
-        G --> H["Geocoding Script<br/>(Python w/ geopy)"];
+        G --> H["Geocoding Script<br/>Python, geopy"];
         H --> I[rewari_villages_geocoded.csv];
     end
 
     subgraph "Phase 2: Backend Simulation API"
-        J(FastAPI Server<br/>main.py) --> K(Simulation Core);
+        J[FastAPI Server<br/>main.py] --> K[Simulation Core];
         F --> K;
         I --> K;
-        K --> L["Agent Class<br/>(Status: S, I, R)"];
-        K --> M["World Class<br/>(SIR Logic, Spatial Indexing)"];
-        M --> N(API Endpoint<br/>/run_simulation);
+        K --> L["Agent Class<br/>Status: S, I, R"];
+        K --> M["World Class<br/>SIR Logic, Spatial Indexing"];
+        M --> N[API Endpoint<br/>/run_simulation];
     end
 
     subgraph "Phase 3: Frontend Control Panel"
-        O(Next.js/React App<br/>page.js) --> P{User Interface};
-        P --> Q["Parameter Sliders<br/>(Population, Radius, etc.)"];
+        O[Next.js/React App<br/>page.js] --> P[User Interface];
+        P --> Q["Parameter Sliders<br/>Population, Radius, etc."];
         P --> R[Run Simulation Button];
-        R -- onClick --> S(API Request to Backend);
+        R -- onClick --> S[API Request to Backend];
         S --> N;
         N -- JSON Response --> S;
-        S --> T{Visualization<br/>(Recharts)};
-        T --> U(Display Epidemic Curve Graph);
+        S --> T["Visualization<br/>Recharts"];
+        T --> U[Display Epidemic Curve Graph];
     end
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
