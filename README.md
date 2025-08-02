@@ -57,30 +57,6 @@ graph TD
 
 ---
 
-## Visualizations & Results
-
-### 1. The Great Settlement: Population Distribution
-
-This plot shows the initial state of the simulation world. Each of the ~667,000 dots represents one agent, placed in a cluster around their geocoded home village. This creates a realistic digital twin of Rewari district's population density.
-
-**`[INSERT YOUR POPULATION DISTRIBUTION PLOT HERE - image_ff46f8.png]`**
-![Population Distribution of Rewari District](https://placehold.co/800x600/1A202C/FFFFFF?text=Population+Distribution+Plot)
-
-### 2. The First Wave: Baseline Epidemic Curve
-
-This graph shows the output of a baseline simulation with no interventions. It clearly demonstrates the classic S-I-R curve, validating the core logic of the model.
-
-**`[INSERT YOUR BASELINE SIR CURVE HERE - image_ffd4e9.jpg]`**
-![Baseline SIR Curve](https://placehold.co/800x400/1A202C/FFFFFF?text=Baseline+SIR+Curve+Plot)
-
-### 3. Experiment 1: Flattening the Curve
-
-This is the first major result of the project. It compares the baseline simulation (in red) to a scenario where a "social distancing" policy (reducing the infection radius) is implemented on Day 30. The result is a clear and dramatic "flattening of the curve," demonstrating the model's utility for policy testing.
-
-**`[INSERT YOUR INTERVENTION COMPARISON PLOT HERE]`**
-![Intervention Comparison Plot](https://placehold.co/800x400/1A202C/FFFFFF?text=Intervention+Comparison+Plot)
-
----
 
 ## Tech Stack
 
