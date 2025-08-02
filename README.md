@@ -15,8 +15,8 @@ graph TD
     subgraph "Phase 1: Data Acquisition & Preparation"
         A[Start: Data Hunt] --> B(Download Geospatial Data<br/>GADM Shapefiles);
         A --> C(Download Census Data<br/>Govt. of India PDF Handbooks);
-        B --> D{Data Extraction & Cleaning<br/>(Jupyter Notebook w/ GeoPandas)};
-        C --> E{Data Extraction & Cleaning<br/>(Jupyter Notebook w/ Camelot)};
+        B --> D{"Data Extraction & Cleaning<br/>(Jupyter Notebook w/ GeoPandas)"};
+        C --> E{"Data Extraction & Cleaning<br/>(Jupyter Notebook w/ Camelot)"};
         D --> F[rewari_boundary.geojson];
         E --> G[rewari_village_population_2011.csv];
         G --> H{Geocoding Script<br/>(Python w/ geopy)};
