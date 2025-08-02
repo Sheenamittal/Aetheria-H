@@ -15,11 +15,11 @@ graph TD
     subgraph "Phase 1: Data Acquisition & Preparation"
         A[Start: Data Hunt] --> B(Download Geospatial Data<br/>GADM Shapefiles);
         A --> C(Download Census Data<br/>Govt. of India PDF Handbooks);
-        B --> D{"Data Extraction & Cleaning<br/>(Jupyter Notebook w/ GeoPandas)"};
-        C --> E{"Data Extraction & Cleaning<br/>(Jupyter Notebook w/ Camelot)"};
+        B --> D["Data Extraction & Cleaning<br/>(Jupyter Notebook w/ GeoPandas)"];
+        C --> E["Data Extraction & Cleaning<br/>(Jupyter Notebook w/ Camelot)"];
         D --> F[rewari_boundary.geojson];
         E --> G[rewari_village_population_2011.csv];
-        G --> H{Geocoding Script<br/>(Python w/ geopy)};
+        G --> H["Geocoding Script<br/>(Python w/ geopy)"];
         H --> I[rewari_villages_geocoded.csv];
     end
 
@@ -27,14 +27,14 @@ graph TD
         J(FastAPI Server<br/>main.py) --> K(Simulation Core);
         F --> K;
         I --> K;
-        K --> L[Agent Class<br/>(Status: S, I, R)];
-        K --> M[World Class<br/>(SIR Logic, Spatial Indexing)];
+        K --> L["Agent Class<br/>(Status: S, I, R)"];
+        K --> M["World Class<br/>(SIR Logic, Spatial Indexing)"];
         M --> N(API Endpoint<br/>/run_simulation);
     end
 
     subgraph "Phase 3: Frontend Control Panel"
         O(Next.js/React App<br/>page.js) --> P{User Interface};
-        P --> Q[Parameter Sliders<br/>(Population, Radius, etc.)];
+        P --> Q["Parameter Sliders<br/>(Population, Radius, etc.)"];
         P --> R[Run Simulation Button];
         R -- onClick --> S(API Request to Backend);
         S --> N;
